@@ -2,16 +2,19 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=0" />
+        <meta name="viewport" content="width=device-width, initial-width=1.0" />
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins'>
         <link rel="stylesheet" href="style.css" />
         <link rel="icon" href="checkmark.png" />
         <title>To-Do List</title>
     </head>
     <body>
-        <div class="main-container">
-            <div class="header-and-clock">
-                <div id="header">
+        <div class="date-container">
+            <div id="date"></div>
+        </div>
+        <div class="main">
+            <div class="title-and-clock-container">
+                <div id="title">
                     <h1>Your To-Do List</h1>
                 </div>
                 <div id="clock">
@@ -33,18 +36,15 @@
                     <span style="--i: 12"><b>12</b></span>
                 </div>
             </div>
-            <div class="list-and-input">
-                <p>What are you up to today..?</p>
-                <div class="input-area">
-                    <input id="task-input" type="text" placeholder="Enter a to-do..." />
-                    <button id="add-task">Add</button>
-                </div>
-            </div> 
+            <div class="input-box">
+                <input id="input" type="text" placeholder="Enter a To-Do..." />
+                <button id="add-button">Add</button>
+            </div>
             <ul id="task-list"></ul>
+        </div>
+        <div id="secret-message">
+            <h1>What are you up to today ...</h1>
         </div>
     </body>
     <script src="script.js"></script>
 </html>
-
-
-            

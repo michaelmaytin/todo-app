@@ -6,36 +6,56 @@
 
 body {
     font-family: 'Poppins';
-    background: rgb(156, 134, 112);
+    background: rgb(201, 236, 255);
     padding: 4rem;
-}
-
-.main-container {
-    background: white;
-    padding: 8rem;
     justify-content: center;
-    width: 100%;
-    max-width: 810px;
-    margin: auto;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-.main-container:hover {
-    box-shadow: 0 20px 40px rgba(0,0,0,1);
-    transition: 1s ease
-}
-
-.header-and-clock {
-    background: white;
+.date-container {
     display: flex;
-    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 25px;
+    max-width: 350px;
 }
 
-#header {
+#date {
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  background: white;
+  padding: 0.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#date:hover {
+    color: rgb(0, 166, 255);
+    transition: 1.5s ease;
+}
+
+.main {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    margin: auto;
+    border-radius: 20px;
+    border: 4px solid white;
+    padding: 4rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2)
+}
+
+.title-and-clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+#title {
     background: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    margin-right: 40px;
+    font-size: larger;
+    padding: 2rem;
 }
 
 #clock {
@@ -91,94 +111,78 @@ body {
     border-radius: 20px;
 }
 
-.list-and-input {
+.input-box {
     background: rgb(255, 255, 255);
-    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
-.list-and-input p {
-    font-size: 25px;
-    font-weight: bolder;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: center;
+#input {
+    padding: 20px 10px;
+    width: 567px;
+    border-radius: 25px;
+    border: 4px solid rgba(0,0,0,.1);
 }
 
-.list-and-input:hover {
-    color: lightgrey;
-    transition: 5s ease;
+#input:hover {
+    border: 4px solid rgba(0,0,0,.4);
+    transition: 0.3s ease;
 }
 
-.input-area {
-    background: rgb(255, 255, 255);
-}
-
-#task-input {
-    width: 70%;
-    height: 50px;
-    margin-right: 20px;
-    border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 4px solid rgba(0,0,0,0.2);
-}
-
-#task-input::placeholder {
-    font-weight: bold;
-    color: rgb(230, 230, 230);
-}
-
-#task-input:hover::placeholder {
-    background: rgb(232, 232, 232);
+#input:hover::placeholder {
+    background: rgb(241, 241, 241);
     color: rgb(0, 0, 0);
-    transition: 1s ease;
+    transition: 4s ease;
 }
 
-#add-task {
-    width: 20%;
-    height: 50px;
-    border-radius: 10px;
-    background: blue;
+#add-button {
+    padding: 20px 10px;
+    width: 100px;
+    margin-left: 10px;
+    border-radius: 25px;
+    border: 4px solid rgb(46, 81, 255);
+    background: rgb(46, 81, 255);
     color: white;
     font-weight: bolder;
-    border: 4px solid blue
 }
 
-#add-task:hover {
-    transform: scale(1.15);
+#add-button:hover {
+    background: white;
     color: blue;
-    background:white;
-    border: solid 4px blue;
-    transition: 0.5s ease;
+    transform: scale(1.1);
+    transition: 0.3s ease;
 }
 
 ul {
-    align-items: center;
+    background: rgb(245, 245, 245);
 }
 
 li {
-    margin-top: 25px;
-    position: relative;
     display: flex;
+    position: relative;
     justify-content: space-between;
-    padding-right: 70px;
+    align-items: center;
+    padding: 8px;
+    padding-right: 20px;
+    border: 1px solid rgba(0,0,0,.1);
 }
 
 li::before {
-    content: "☺";
+    content: "◆";
     position: absolute;
     left: -25px;
 }
 
 li delete-button {
-    background: rgb(255, 33, 33);
+    background: rgb(255, 0, 0);
     width: 35px;
     height: 35px;
     border-radius: 50%;
     cursor: pointer;
     color: white;
     font-weight: bold;
-    border: 4px solid red;
+    border: 4px solid rgb(255, 255, 255);
     
     display: flex;
     justify-content: center;
@@ -188,6 +192,7 @@ li delete-button {
 li delete-button:hover {
     transform: scale(1.15);
     background: white;
+    border: 4px solid red;
     color: red;
     transition: 0.3s ease;
 }
@@ -195,4 +200,16 @@ li delete-button:hover {
 li.completed span {
     text-decoration: line-through;
     color: gray;
+}
+
+#secret-message {
+    color: rgb(201, 236, 255);
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.main:hover + #secret-message {
+    color: rgb(142, 179, 199);
+    transition: 0.3s ease;
 }
